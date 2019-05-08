@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GitHub API - Searching</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
+</head>
+<body>
+
+    <button onclick="repositoryController.listRepositories()" type="button">
+        Importar Negociações
+    </button>
+    <div id="repositoriesView"></div>
+
+    <script src="controller/RepositoryController.js"></script>
+    <script src="model/ListRepositories.js"></script>
+    <script src="model/Repository.js"></script>
+    <script src="service/RepositoryService.js"></script>
+    <script src="view/RepositoryView.js"></script>
+    <script>
+        let repositoryController = new RepositoryController();
+    </script>
+</body>
+</html>
