@@ -32,7 +32,7 @@ class RepositoryService
                     console.log('Unable to receive server information!');
                 }   
            }
-        }
+        };
 
         xhr.send();
     }

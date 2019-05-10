@@ -12,6 +12,6 @@ class ListRepositories
 
     get repositories()
     {
-        return [].concat(this._repositories);
+        return this._repositories;
     }
 }

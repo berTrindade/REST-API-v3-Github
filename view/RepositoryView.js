@@ -1,11 +1,11 @@
 class RepositoryView
 {
-    constructor(element)
-    {
+    constructor(element) 
+    {    
         this._element = element;
     }
 
-    _template(model)
+    template(model)
     {
         return `<table>
                     <thead>
@@ -18,19 +18,18 @@ class RepositoryView
 
                     <tbody>
                         ${model.repositories.map(repository => 
-                        {
-                            return `<tr>
-                                        <td>${repository.name}</td>
-                                        <td>${repository.url}</td>
-                                        <td>${repository.description}</td>
-                                    </tr>`       
-                        }).join('')}
+                            `<tr>
+                                <td>${repository.name}</td>
+                                <td>${repository.url}</td>
+                                <td>${repository.description}</td>
+                            </tr>`   
+                        ).join('')}
                     </tbody>
                 </table>`;
     }
 
-    update(model)
+    update(model) 
     {
-        this._element.innerHTML = this._template(model);
+        this._element.innerHTML = this.template(model);
     }
 }

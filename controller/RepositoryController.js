@@ -4,9 +4,11 @@ class RepositoryController
     {
         let $ = document.querySelector.bind(document);
 
-        this._listRepositories = new ListRepositories();
-        this._repositoriesView = new RepositoryView($('#repositoriesView'));
-        this._repositoriesView.update(this._listRepositories);
+        //this._listRepositorie = new ListRepositories(model => this._repositoriesView.update(model));
+        //this._repositoriesView.update(this._listRepositorie);
+
+        this._listRepositorie = new ListRepositories();
+        this._repositoriesView = new RepositoryView($('#repositoriesView')); 
     }
 
     listRepositories()
@@ -15,8 +17,8 @@ class RepositoryController
 
         service.getRepositories(repositories => 
         {
-            repositories.forEach(repository => this._listRepositories.add(repository.name));
-            console.log('Negociações importadas com sucesso');
+            repositories.forEach(repository => this._listRepositorie.add(repository));
+            this._repositoriesView.update(this._listRepositorie); 
         });
     }
 }
