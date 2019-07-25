@@ -10,7 +10,7 @@ class RepositoryView
         return `<table>
                     <thead>
                         <tr>
-                            <th>NAME</th>
+                            <th>NAMES</th>
                             <th>URL</th>
                             <th>DESCRIPTION</th>
                         </tr>
